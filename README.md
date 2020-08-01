@@ -62,6 +62,8 @@ buffer.get()   # should return ['d', 'e', 'f']
 
 Navigate into the `names` directory. Here you will find two text files containing 10,000 names each, along with a program `names.py` that compares the two files and prints out duplicate name entries. Try running the code with `python3 names.py`. Be patient because it might take a while: approximately six seconds on my laptop. What is the runtime complexity of this code?
 
+O(n^2)
+
 Six seconds is an eternity so you've been tasked with speeding up the code. Your goal is to use one of the data structures we built out over the course of this week in order to optimize and improve on the runtime so that it's more efficient than O(n²).
 
 A follow-up question to think about: _*once you've used one of the data structures we implemented over the course of the week*_ in order to improve the runtime of the implementation, what other data structures (including ones from Python's standard library) are also possible candidates for improving the runtime of the implementation?
@@ -71,28 +73,31 @@ A follow-up question to think about: _*once you've used one of the data structur
 Inside of the `reverse` directory, you'll find a basic implementation of a Singly Linked List. _Without_ making it a Doubly Linked List (adding a tail attribute), complete the `reverse_list()` function within `reverse/reverse.py`.
 
 For example,
-```
+
+```text
 1->2->3->None
 ```
+
 would become...
-```
+
+```text
 3->2->1->None
 ```
 
 While credit will be given for a functional solution, only optimal solutions will earn a ***3*** on this task.
 
-#### Stretch 
+#### Stretch
 
-* Say your code from `names.py` is to run on an embedded computer with very limited RAM. Because of this, memory is extremely constrained and you are only allowed to store names in arrays (i.e. Python lists). How would you go about optimizing the code under these conditions? Try it out and compare your solution to the original runtime. (If this solution is less efficient than your original solution, include both and label the strech solution with a comment)
-
+* Say your code from `names.py` is to run on an embedded computer with very limited RAM. Because of this, memory is extremely constrained and you are only allowed to store names in arrays (i.e. Python lists). How would you go about optimizing the code under these conditions? Try it out and compare your solution to the original runtime. (If this solution is less efficient than your original solution, include both and label the stretch solution with a comment)
 
 ### Rubric
+
 | TASK | 1 - DOES NOT MEET Expectations | 2 - MEETS Expectations | 3 - EXCEEDS Expectations | SCORE |
 | ----- | ------- | ------- | ------- | -- |
 | Task 1. Implement a Ring Buffer Data Structure | Solution in `ring_buffer.py` DOES NOT run OR it runs but has multiple logical errors, failing 2 or more tests. | Solution in `ring_buffer.py` runs, but may have one or two logical errors; passes at least 5/6 tests (Note that each function in the test file that begins with `test` is a test). | Solution in `ring_buffer.py` has no syntax or logical errors and passes all tests (Note that each function in the test file that begins with `test` is a test). | |
 | Task 2. Runtime Optimization | Student does NOT correctly identify the runtime of the starter code in `name.py` and is not able to optimize it to run in under 6 seconds using a data structure that was implemented during the week. | Student does not identify the runtime of the starter code in `name.py`, but optimizes it to run in under 6 seconds, with a solution that exhibits the appropriate runtime, using a data structure that was implemented during the week | Student does BOTH correctly identify the runtime of the starter code in `name.py` and optimizes it to run in under 6 seconds, with an appropriate runtime using a data structure that was implemented during the week. |  |
 | Task 3. Reverse the contents of a Singly Linked List | Student's solution in `reverse.py` is failing one or more tests. | Student's solution in `reverse.py` is able to correctly print out the contents of the Linked List in reverse order, passing all tests, BUT, the runtime of their solution is not optimal (requires looping through the list more than once). | Student's solution in `reverse.py` is able to correctly print out the contents of the Linked List in reverse order, passing all tests AND exhibits an appropriate runtime. |  |
 
-
 #### Passing the Sprint
+
 Score ranges for a 1, 2, and 3 are shown in the rubric above. For a student to have _passed_ a sprint challenge, they need to earn an **at least 2** for all items on the rubric.
